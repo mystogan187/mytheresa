@@ -4,29 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efbcbf34-0f35-4a73-81bd-7049492b87cb" name="Changes" comment="mytheresaApi">
-      <change afterPath="$PROJECT_DIR$/src/API/ProductApiResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Application/UseCase/GetProductsUseCase.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Domain/Entity/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Domain/Repository/ProductRepositoryInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Domain/Service/ProductDiscountService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Infrastructure/Controller/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Infrastructure/Data/products.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Product/Infrastructure/Repository/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpspec.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpspec.xml" afterDir="false" />
+    <list default="true" id="efbcbf34-0f35-4a73-81bd-7049492b87cb" name="Changes" comment="Refactor api to microservices DDD">
+      <change afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API/ScalpLinkedinPostsResource.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkedinPosts/Application/UseCase/GetLinkedinPostsUseCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkedinPosts/Infrastructure/Controller/JobPostsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/api_platform.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/api_platform.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product/Infrastructure/Repository/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Service/ProductService.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +21,14 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -191,27 +184,32 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "PHPUnit.ProductServiceTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/alex/Desktop/mytheresaApi/mytheresaApi/src/Product/Infrastructure/Data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Run&quot;,
+    &quot;PHPUnit.ProductServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alex/Desktop/mytheresaApi/mytheresaApi/src/Product/Infrastructure/Data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Product/Infrastructure/Data" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.ProductServiceTest">
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/public/index.js" working-dir="$PROJECT_DIR$/public">
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml.dist" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
@@ -222,6 +220,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.index.js" />
         <item itemvalue="PHPUnit.ProductServiceTest" />
       </list>
     </recent_temporary>
@@ -242,7 +241,9 @@
       <option name="presentableId" value="Default" />
       <updated>1726566614695</updated>
       <workItem from="1726566615713" duration="1937000" />
-      <workItem from="1726653508929" duration="19225000" />
+      <workItem from="1726653508929" duration="19416000" />
+      <workItem from="1727714222252" duration="624000" />
+      <workItem from="1727776130391" duration="7125000" />
     </task>
     <task id="LOCAL-00001" summary="skeleton">
       <option name="closed" value="true" />
@@ -268,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726574367543</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor api to microservices DDD">
+      <option name="closed" value="true" />
+      <created>1727711083159</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727711083160</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +297,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="skeleton" />
     <MESSAGE value="mytheresaApi" />
-    <option name="LAST_COMMIT_MESSAGE" value="mytheresaApi" />
+    <MESSAGE value="Refactor api to microservices DDD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor api to microservices DDD" />
   </component>
 </project>
