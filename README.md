@@ -39,7 +39,13 @@ This project is a RESTful API that provides product information with applicable 
    git clone https://github.com/mystogan187/mytheresaApi.git
    cd mytheresaApi
    ```
+## !!UPDATE with docker!!
    
+   ```bash
+   docker compose up --build
+   http://localhost:8000/products
+   ```
+
 2. **Install Dependencies**
 
    ```bash
